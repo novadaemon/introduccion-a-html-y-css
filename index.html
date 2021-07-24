@@ -1,0 +1,1653 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Jesús Damián García Pérez" />
+    <meta name="date" content="07/01/2014"/>
+    <meta name="generator" content="easybook 4.8"/>
+
+    <title>Introducción a HTML y CSS</title>
+
+    <link rel="stylesheet" href="./css/easybook.css" />
+
+</head>
+
+<body><div class="container">
+
+    <div class="item item:cover">
+
+<h1>Introducción a HTML y CSS</h1>
+
+<h2>Jesús Damián García Pérez</h2>
+
+</div>
+    <div class="item item:toc">
+
+<h1>Índice de contenidos</h1>
+
+<ul>
+                        
+                                                                <li class="chapter level-1">
+                        <span>Capítulo 1</span> <a href="#etiquetas-html-5">Etiquetas HTML 5</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.1</span> <a href="#etiquetas-estructurales">Etiquetas estructurales</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.2</span> <a href="#texto">Texto</a>
+                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                    <li class="chapter level-2">
+                        <span>1.3</span> <a href="#enlaces">Enlaces</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.4</span> <a href="#listas">Listas</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.5</span> <a href="#imagenes-y-objetos-embebidos">Imágenes y objetos embebidos</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.6</span> <a href="#tablas">Tablas</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.7</span> <a href="#formularios">Formularios</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.8</span> <a href="#dibujando-con-html-5">Dibujando con HTML 5</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.9</span> <a href="#otras-etiquetas-3">Otras etiquetas</a>
+                    </li>
+                            
+                            
+                                                                <li class="chapter level-1">
+                        <span>Capítulo 2</span> <a href="#css">CSS</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>2.1</span> <a href="#selectores">Selectores</a>
+                    </li>
+                                                                                    
+                    </ul>
+
+</div>
+    <div class="item item:chapter">
+
+<h1 id="etiquetas-html-5"><span>Capítulo 1</span> Etiquetas HTML 5</h1>
+
+<p><a name="mi_ancla"></a></p>
+
+<h2 id="etiquetas-estructurales">1.1 Etiquetas estructurales</h2>
+
+<p>Las etiquetas estructurales se utilizan para diseñar la estructura de la página. Se insertan en el cuerpo, dentro de las etiquetas <code>&lt;body&gt;&lt;/body&gt;</code> y no realizan modificaciones visuales en el contenido.</p>
+
+<div class="figure center" id="figure-1-1">
+    <img src="images/estructura.png" alt="Estructura estándar de una página web en HTML5" />
+
+    <p class="caption"><strong>Figura 1.1</strong> Estructura estándar de una página web en HTML5</p>
+</div>
+
+
+<p><strong><code>&lt;header&gt;</code></strong></p>
+
+<p>Se utiliza para definir la información principal sobre el sitio web que normalmente se muestra en el encabezamiento: Nombre, logo, slogan, etc.</p>
+
+<p><strong><code>&lt;nav&gt;</code></strong></p>
+
+<p>Encierra la barra de navegación del sitio.</p>
+
+<p><strong><code>&lt;article&gt;</code></strong></p>
+
+<p>Define la parte de la página que contiene la Información Principal. Por ejemplo: los artículos de un blog.</p>
+
+<p><strong><code>&lt;aside&gt;</code></strong></p>
+
+<p>Define la barra lateral que se ubica al lado de la columna de Información Principal. Esta es una columna o sección que normalmente contiene datos relacionados con la información principal pero que no son relevantes o igual de importantes.</p>
+
+<p><strong><code>&lt;footer&gt;</code></strong></p>
+
+<p>Representa el final o pie de página. Se utiliza para encerrar información Institucional del sitio: licencia, autor, empresa, etc.</p>
+
+<p><strong><code>&lt;section&gt;</code></strong></p>
+
+<p>Se utiliza para definir diferentes secciones que se encuentran dentro de la sección de Información Principal y que comparten similares características. Normalmente se utilizan dentro de las etiquetas <code>&lt;article&gt;&lt;/article&gt;</code>.</p>
+
+<div class="figure center" id="figure-1-2">
+    <img src="images/estructura-ext.png" alt="Ubicación del elemento <code>&lt;section&gt;</code>" />
+
+    <p class="caption"><strong>Figura 1.2</strong> Ubicación del elemento <code>&lt;section&gt;</code></p>
+</div>
+
+
+<p><strong><code>&lt;hgroup&gt;</code></strong></p>
+
+<p>Define el encabezamiento de una sección de información en particular. Se utiliza por ejemplo para definir los títulos de los artículos de un block.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">article</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">header</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">hgroup</span>&gt;</span>
+                <span class="sc2">&lt;<span class="kw2">h4</span>&gt;</span>Mi artículo<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h2</span>&gt;</span>
+                <span class="sc2">&lt;<span class="kw2">h5</span>&gt;</span>Publicado el <span class="sc2">&lt;<span class="kw2">time</span> <span class="kw3">datetime</span><span class="sy0">=</span><span class="st0">&quot;2013-12-22&quot;</span> pubdate&gt;</span>22 de diciembre de 2013<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">time</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">h3</span>&gt;</span>
+            <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">hgroup</span>&gt;</span>    
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">header</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+            Contenido del artículo
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">article</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    <article>
+        <header>
+            <hgroup>
+                <h4>Mi artículo</h2>
+                <h5>Publicado el <time pubdate="2013-12-22">22 de diciembre de 2013</time></h3>
+            </hgroup>
+        </header>
+        <p>
+            Contenido del artículo
+        </p>
+    </article>
+</p>
+
+<p><strong><code>&lt;div&gt;</code></strong></p>
+
+<p>Se utiliza la etiqueta <code>&lt;div&gt;</code> para agrupar los elementos que forman cada zona o división de la página para los cuales no se pueden utilizar ninguna de las etiquetas definidas anteriormente.</p>
+
+<h2 id="texto">1.2 Texto</h2>
+
+<p>La mayor parte del contenido de las páginas HTML habituales está formado por texto, llegando a ser más del 90% del código de la página. Por este motivo, es muy importante conocer los elementos y etiquetas que define HTML para el manejo del texto.</p>
+
+<p><strong><code>&lt;h1&gt;...&lt;h6&gt;</code></strong></p>
+
+<h3 id="etiquetas-de-encabezado">1.2.1 Etiquetas de encabezado</h3>
+
+<p>Se utilizan para definir encabezados dentro del texto. El nivel de importancia es mayor a medida que sea menor el número de la etiqueta <strong><code>&lt;h&gt;</code></strong>.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">h1</span>&gt;</span>Mi título<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">h2</span>&gt;</span>Mí título<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h2</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">h3</span>&gt;</span>Mí título<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h3</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">h4</span>&gt;</span>Mí título<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h4</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">h5</span>&gt;</span>Mí título<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h5</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">h6</span>&gt;</span>Mí título<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h6</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    <h1>Mi título</h1>
+    <h2>Mi título</h2>
+    <h3>Mi título</h3>
+    <h4>Mi título</h4>
+    <h5>Mi título</h5>
+    <h6>Mi título</h6>    
+</p>
+
+<p><strong><code>&lt;p&gt;</code></strong></p>
+
+<p>Una de las etiquetas más utilizadas de HTML es la etiqueta <code>&lt;p&gt;</code>, que permite definir los párrafos que forman el texto de una página. Para delimitar el texto de un párrafo, se encierra ese texto con la etiqueta <code>&lt;p&gt;</code>, como muestra el siguiente ejemplo:</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Este es el texto que forma el primer párrafo de la página.
+    Los párrafos pueden ocupar varias líneas y el navegador se encarga
+    de ajustar su longitud al tamaño de la ventana.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    El segundo párrafo de la página también se define encerrandosu texto con la etiqueta p. El navegador también se encarga de separar automáticamente cada párrafo.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    Este es el texto que forma el primer párrafo de la página.
+    Los párrafos pueden ocupar varias líneas y el navegador se encarga
+    de ajustar su longitud al tamaño de la ventana.
+</p>
+
+<p>
+    El segundo párrafo de la página también se define encerrandosu texto con la etiqueta p. El navegador también se encarga de
+    separar automáticamente cada párrafo.
+</p>
+
+<h3 id="marcado-de-texto">1.2.2 Marcado de texto</h3>
+
+<p><strong><code>&lt;em&gt;, &lt;i&gt;, &lt;strong&gt;, &lt;b&gt;, &lt;mark&gt;</code></strong></p>
+
+<p><strong>Enfásis</strong></p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Programar con <span class="sc2">&lt;<span class="kw2">em</span>&gt;</span>HTML<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">em</span>&gt;</span> y <span class="sc2">&lt;<span class="kw2">em</span>&gt;</span>CSS<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">em</span>&gt;</span> es sumamente fácil.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Programar con <span class="sc2">&lt;<span class="kw2">strong</span>&gt;</span>HTML<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">strong</span>&gt;</span> y <span class="sc2">&lt;<span class="kw2">strong</span>&gt;</span>CSS<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">strong</span>&gt;</span> es sumamente fácil.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Programar con <span class="sc2">&lt;<span class="kw2">mark</span>&gt;</span>HTML<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">mark</span>&gt;</span> y <span class="sc2">&lt;<span class="kw2">mark</span>&gt;</span>CSS<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">mark</span>&gt;</span> es sumamente fácil.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span> 
+    La etiqueta <span class="sc2">&lt;<span class="kw2">b</span>&gt;</span> produce el mismo efecto visual que <span class="sc2">&lt;<span class="kw2">strong</span>&gt;</span>.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    La etiqueta <span class="sc2">&lt;<span class="kw2">i</span>&gt;</span> produce el mismo efecto visual que <span class="sc2">&lt;<span class="kw2">em</span>&gt;</span>.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    Programar con <em>HTML</em> y <em>CSS</em> es sumamente fácil.
+</p>
+
+<p>
+    Programar con <strong>HTML</strong> y <strong>CSS</strong> es sumamente fácil.
+</p>
+
+<p>
+    Programar con <mark>HTML</mark> y <mark>CSS</mark> es sumamente fácil.
+</p>
+
+<p> 
+    La etiqueta <b>&#60b&#62</b> produce el mismo efecto visual que <strong>&#60strong&#62</strong>.
+</p>
+
+<p>
+    La etiqueta <i>&#60i&#62</i> produce el mismo efecto visual que <em>&#60em&#62</em>.
+</p>
+
+<h3 id="modificaciones-realizadas-en-el-texto">1.2.3 Modificaciones realizadas en el texto</h3>
+
+<p><strong><code>&lt;del&gt; e &lt;ins&gt;</code></strong></p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    El HTML, acrónimo inglés de Hyper Text Markup Language (lenguaje de
+    <span class="sc2">&lt;<span class="kw2">del</span> <span class="kw3">datetime</span><span class="sy0">=</span><span class="st0">&quot;20091025&quot;</span> <span class="kw3">cite</span><span class="sy0">=</span><span class="st0">&quot;http://www.librosweb.es/mas_informacion.html&quot;</span>&gt;</span>marcado de hipertexto<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">del</span>&gt;</span> <span class="sc2">&lt;<span class="kw2">ins</span> <span class="kw3">datetime</span><span class="sy0">=</span><span class="st0">&quot;20091026&quot;</span> <span class="kw3">cite</span><span class="sy0">=</span><span class="st0">&quot;http://www.librosweb.es/mas_informacion.html&quot;</span>&gt;</span>marcas hipertextuales<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ins</span>&gt;</span>) es un lenguaje de marcación diseñado para estructurar textos y presentarlos en forma de hipertexto.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    El HTML, acrónimo inglés de Hyper Text Markup Language (lenguaje de
+    <del datetime="20091025" cite="http://www.librosweb.es/mas_informacion.html">marcado de hipertexto</del> <ins datetime="20091026" cite="http://www.librosweb.es/mas_informacion.html">marcas hipertextuales</ins>) es un lenguaje de marcación diseñado para estructurar textos y presentarlos en forma de hipertexto.
+</p>
+
+<h3 id="citas-textuales">1.2.4 Citas textuales</h3>
+
+<p><strong><code>&lt;blockquote&gt;, &lt;cite&gt; y &lt;q&gt;</code></strong></p>
+
+<p>Se utiliza la etiqueta <code>&lt;blokquote&gt;</code> para definir citas textuales. Es la etiqueta con el nombre más largo.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Según el W3C, el valor del atributo <span class="sc2">&lt;<span class="kw2">em</span>&gt;</span>cite<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">em</span>&gt;</span> en las etiquetas <span class="sc2">&lt;<span class="kw2">strong</span>&gt;</span>blockquote<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">strong</span>&gt;</span> tiene el siguiente significado:
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">blockquote</span> <span class="kw3">cite</span><span class="sy0">=</span><span class="st0">&quot;http://www.w3.org/TR/html401/struct/text.html&quot;</span>&gt;</span>&quot;El valor de este atributo es una dirección URL que indica el documento original de la cita.&quot;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">blockquote</span>&gt;</span></pre>
+</div>
+
+<p>
+    Según el W3C, el valor del atributo <em>cite</em> en las etiquetas <strong>blockquote</strong> tiene el siguiente significado:
+</p>
+
+<blockquote cite="http://www.w3.org/TR/html401/struct/text.html">"El valor de este atributo es una dirección URL que indica el documento original de la cita."</blockquote>
+
+<p>En ocasiones, no está clara la diferencia entre <code>&lt;cite&gt;</code> y <code>&lt;blockquote&gt;</code>. El elemento <code>&lt;cite&gt;</code> marca el autor de la cita (persona, documento, etc.) y <code>&lt;blockquote&gt;</code> marca el contenido de la propia cita. En el siguiente ejemplo, <code>&lt;blockquote&gt;</code> encierra el contenido de una frase célebre y <code>&lt;cite&gt;</code> encierra el nombre de su autor:</p>
+
+<div class="code html">
+<pre class="html5">Como dijo <span class="sc2">&lt;<span class="kw2">cite</span>&gt;</span>Mahatma Gandhi<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">cite</span>&gt;</span>:
+<span class="sc2">&lt;<span class="kw2">blockquote</span>&gt;</span>&quot;Vive como si fueras a morir mañana y aprende como si fueras a vivir para siempre.&quot;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">blockquote</span>&gt;</span></pre>
+</div>
+
+<p>Como dijo <cite>Mahatma Gandhi</cite>:</p>
+
+<blockquote>"Vive como si fueras a morir mañana y aprende como si fueras a vivir para siempre."</blockquote>
+
+<p>La etiqueta <code>&lt;q&gt;</code> también se utiliza para insertar citas textuales, pero a diferencia de <code>&lt;blockquote&gt;</code>, las citas no se colocan debajo, sino en la misma línea.</p>
+
+<div class="code html">
+<pre class="html5">Como dijo <span class="sc2">&lt;<span class="kw2">cite</span>&gt;</span>Mahatma Gandhi<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">cite</span>&gt;</span>: <span class="sc2">&lt;<span class="kw2">q</span>&gt;</span>&quot;Vive como si fueras a morir mañana y aprende como si fueras a vivir para siempre.&quot;<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">q</span>&gt;</span></pre>
+</div>
+
+<p>Como dijo <cite>Mahatma Gandhi</cite>: <q>"Vive como si fueras a morir mañana y aprende como si fueras a vivir para siempre."</q></p>
+
+<h3 id="otras-etiquetas-de-marcado">1.2.5 Otras etiquetas de marcado:</h3>
+
+<p><strong><code>&lt;abbr&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;abbr&gt;</code> marca las abreviaturas de un texto.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    El <span class="sc2">&lt;<span class="kw2">abbr</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;doctor&quot;</span>&gt;</span>Dr.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">abbr</span>&gt;</span> atendió cordialmente a sus pacientes.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    El <abbr title="doctor">Dr.</abbr> atendió cordialmente a sus pacientes.
+</p>
+
+<p><strong><code>&lt;dfn&gt;</code></strong></p>
+
+<p>HTML incluye la etiqueta <code>&lt;dfn&gt;</code> para proporcionar al usuario la definición de todas las palabras para las que se considere apropiado.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Con estos síntomas, podría tratarse de un caso de <span class="sc2">&lt;<span class="kw2">dfn</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Imagen o sensación subjetiva, propia de un sentido, determinada por otra sensación que afecta a un sentido diferente&quot;</span>&gt;</span>sinestesia<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">dfn</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    Con estos síntomas, podría tratarse de un caso de <dfn title="Imagen o sensación subjetiva, propia de un sentido, determinada por otra sensación que afecta a un sentido diferente">sinestesia</dfn>
+</p>
+
+<h3 id="marcado-de-texto-generico">1.2.6 Marcado de texto genérico</h3>
+
+<p><strong><code>&lt;span&gt;</code></strong></p>
+
+<p>En ocasiones es necesario delimitar cierta región de texto, sobre todo para poder aplicar estilos css, para esto HTML provee la etiqueta <code>&lt;span&gt;</code></p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Pueden contactarme a través del teléfono <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;telefono&quot;</span>&gt;</span>+5353878635<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span> o mediante la dirección de correo electrónico <span class="sc2">&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;email&quot;</span>&gt;</span>jdamian@tic.copextel.com.cu.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    Pueden contactarme a través del teléfono <span class="telefono">+5353878635</span> o mediante la dirección de correo electrónico <span class="email">jdamian@tic.copextel.com.cu.</span>
+</p>
+
+<h3 id="espacios-en-blanco-y-saltos-de-lineas">1.2.7 Espacios en blanco y saltos de líneas</h3>
+
+<p>El aspecto más sorprendente del lenguaje HTML cuando se desarrollan los primeros documentos es el tratamiento especial de los "espacios en blanco" del texto. HTML considera espacio en blanco a los espacios en blanco, los tabuladores, los retornos de carro y el carácter de nueva línea (ENTER o Intro).</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Este primer párrafo no contiene saltos de línea ni otro tipo de espaciado.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Este segundo párrafo sí que contiene saltos
+    de
+    línea
+    y    otro     tipo de     espaciado.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    Este primer párrafo no contiene saltos de línea ni otro tipo de espaciado.
+</p>
+
+<p>
+    Este segundo párrafo sí que contiene saltos
+    de
+    línea
+    y    otro     tipo de     espaciado.
+</p>
+
+<h3 id="nuevas-lineas">1.2.8 Nuevas líneas</h3>
+
+<p><strong><code>&lt;br&gt;</code></strong></p>
+
+<p>Para insertar una nueva línea y a forzar que el texto siguiente se muestre debajo se utiliza la etiqueta <code>&lt;br&gt;</code>.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    En este párrafo si
+    se aplican<span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    los saltos<span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    de líneas.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    En este párrafo si
+    se aplican<br/>
+    los saltos<br/>
+    de líneas.
+</p>
+
+<h3 id="espacios-en-blanco">1.2.9 Espacios en blanco</h3>
+
+<p>Para incluir los espacios en blanco es necesario utilizar un tipo de elemento llamado entidad.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    En este parrafo si se <span class="sc1">&amp;nbsp;</span> <span class="sc1">&amp;nbsp;</span>aplican los <span class="sc1">&amp;nbsp;</span> <span class="sc1">&amp;nbsp;</span> <span class="sc1">&amp;nbsp;&amp;nbsp;</span> espacios en blanco.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    En este parrafo si se &nbsp; &nbsp;aplican los &nbsp; &nbsp; &nbsp; &nbsp; espacios en blanco.
+</p>
+
+<h3 id="texto-preformateado">1.2.10 Texto preformateado</h3>
+
+<p><strong><code>&lt;pre&gt;</code></strong></p>
+
+<p>En ocasiones es necesario mostrar el texto tal y como está escrito. Sobre todo cuando es generado por alguna aplicación.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">pre</span>&gt;</span>
+   La etiqueta pre 
+       muestra el
+   texto     tal
+       como esta
+    escrito.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">pre</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    La etiqueta pre 
+        muestra el
+    texto     tal
+        como esta
+     escrito.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<pre>
+   La etiqueta pre 
+       muestra el
+   texto     tal
+       como esta
+    escrito.
+</pre>
+
+<p>
+    La etiqueta pre 
+        muestra el
+    texto     tal
+        como esta
+     escrito.
+</p>
+
+<p><strong><code>&lt;code&gt;</code></strong></p>
+
+<p>Otra etiqueta relacionada con <code>&lt;pre&gt;</code> es <code>&lt;code&gt;</code>, la cual sirve para mostrar el texto del código fuente de cualquier lenguaje de programación.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">code</span>&gt;</span>
+    La etiqueta code es similar a la etiqueta pre, sobre todo en el formato de texto, pero a diferencia de esta no respeta los
+        espacios en blanco ni los
+    saltos de líneas
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">code</span>&gt;</span></pre>
+</div>
+
+<p><code>
+    La etiqueta code es similar a la etiqueta pre, sobre todo en el formato de texto, pero a diferencia de esta no respeta los
+        espacios en blanco ni los
+    saltos de líneas
+</code></p>
+
+<p><strong><code>&lt;var&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;var&gt;</code> se utiliza para definir variables que han sido insertadas en el texto.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    En la función planteada <span class="sc2">&lt;<span class="kw2">var</span>&gt;</span>x<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">var</span>&gt;</span> vale 5
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    En la función planteada <var>x</var> vale 5
+</p>
+
+<p><strong><code>&lt;math&gt;</code></strong></p>
+
+<p>Para marcar contenido relacionado con expresiones matemáticas se utiliza la etiqueta semántica <code>&lt;math&gt;</code></p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">figure</span>&gt;</span>
+    <span class="sc2">&lt;math&gt;</span>
+        <span class="sc2">&lt;mi&gt;</span>h<span class="sc2">&lt;<span class="sy0">/</span>mi&gt;</span>
+        <span class="sc2">&lt;mo&gt;</span>=<span class="sc2">&lt;<span class="sy0">/</span>mo&gt;</span>
+        <span class="sc2">&lt;msqrt&gt;</span>
+            <span class="sc2">&lt;msup&gt;&lt;mi&gt;</span>a<span class="sc2">&lt;<span class="sy0">/</span>mi&gt;&lt;mn&gt;</span>2<span class="sc2">&lt;<span class="sy0">/</span>mn&gt;&lt;<span class="sy0">/</span>msup&gt;</span>
+            <span class="sc2">&lt;mi&gt;</span>+<span class="sc2">&lt;<span class="sy0">/</span>mi&gt;</span>
+            <span class="sc2">&lt;msup&gt;&lt;mi&gt;</span>b<span class="sc2">&lt;<span class="sy0">/</span>mi&gt;&lt;mn&gt;</span>2<span class="sc2">&lt;<span class="sy0">/</span>mn&gt;&lt;<span class="sy0">/</span>msup&gt;</span>
+        <span class="sc2">&lt;<span class="sy0">/</span>msqrt&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span>math&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">figcaption</span>&gt;</span>
+    El teorema de Pitágoras plantea que: En todo triángulo rectángulo, la hipotenusa <span class="sc2">&lt;<span class="kw2">var</span>&gt;</span>h<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">var</span>&gt;</span> es igual a la raíz cuadrada de la suma de los cuadrados de los lados: <span class="sc2">&lt;<span class="kw2">var</span>&gt;</span>a<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">var</span>&gt;</span> y <span class="sc2">&lt;<span class="kw2">var</span>&gt;</span>b<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">var</span>&gt;</span>.
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">figcaption</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">figure</span>&gt;</span></pre>
+</div>
+
+<p><figure>
+    <math>
+        <mi>h</mi>
+        <mo>=</mo>
+        <msqrt>
+            <msup><mi>a</mi><mn>2</mn></msup>
+            <mi>+</mi>
+            <msup><mi>b</mi><mn>2</mn></msup>
+        </msqrt>
+    </math>
+    <figcaption>
+    El teorema de Pitágoras plantea que: En todo triángulo rectángulo, la hipotenusa <var>h</var> es igual a la raíz cuadrada de la suma de los cuadrados de los lados: <var>a</var> y <var>b</var>.
+    </figcaption>
+</figure></p>
+
+<h3 id="otras-etiquetas">1.2.11 Otras etiquetas</h3>
+
+<p><strong><code>&lt;details&gt; y &lt;summary&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;details&gt;</code> provee un comportamiento muy usado en la web: permite definir un area expandible. El área por defecto se muestra comprimida, al hacer click sobre ella se muestra su contenido. Si se le agrega el atributo <em>open</em>  de tipo booleano le indicamos que el área por defecto se muestra expandida. La etiqueta <code>&lt;summary&gt;</code> se utiliza para indicar el título de la sección marcada con <code>&lt;details&gt;</code>.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">article</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">h3</span>&gt;</span>Disco duro SATA<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h3</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">details</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">summary</span>&gt;</span>Detalles del producto<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">summary</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Descripción del articulo<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Precio: $ 125.12<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">details</span>&gt;</span>        
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">article</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">h3</span>&gt;</span>Disco duro SATA<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h3</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">details</span> open&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">summary</span>&gt;</span>Detalles del producto<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">summary</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>La sección se muestra expandida por defecto<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Precio: $ 125.12<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">details</span>&gt;</span>        
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    <article>
+        <h3>Disco duro SATA</h3>
+        <details>
+            <p>Descripción del artículo</p>
+            <p>Precio: $ 125.12</p>
+        </details>        
+</p>
+
+<p>
+    <article>
+        <h3>Disco duro SATA</h3>
+        <details open>
+            <p>La sección se muestra expandida por defecto</p>
+            <p>Precio: $ 125.12</p>
+        </details>        
+</p>
+
+<p><strong><code>&lt;address&gt;</code></strong></p>
+
+<p>Se utiliza para agrupar información del contacto como por ejemplo el autor de un artículo espécifico. Es considerado un elemento estructural.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">address</span>&gt;</span>
+    Juan Delgado 319 apt. 32<span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    e/ Goicuría y D'strampes<span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    Víbora, Diez de Octubre<span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    La Habana, Cuba<span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">address</span>&gt;</span></pre>
+</div>
+
+<address>
+    Juan Delgado 319 apt. 32<br/>
+    e/ Goicuría y D'strampes<br/>
+    Víbora, Diez de Octubre<br/>
+    La Habana, Cuba<br/>
+</address>
+
+<p><strong><code>&lt;small&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;small&gt;</code> se utiliza para marcar el llamado "texto pequeño". Como impresiones legales, descargos, etc...</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">small</span>&gt;</span>Derechos Reservados <span class="sc1">&amp;copy;</span> 2011 MinkBooks<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">small</span>&gt;</span></pre>
+</div>
+
+<p><small>Derechos Reservados &copy; 2011 MinkBooks</small></p>
+
+<p><strong><code>&lt;kbd&gt;</code></strong></p>
+
+<p>Se utiliza para representar combinaciones de teclas del teclado.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Para guardar esta página en Favoritos, presione <span class="sc2">&lt;<span class="kw2">kbd</span>&gt;</span>Ctrl<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">kbd</span>&gt;</span>+<span class="sc2">&lt;<span class="kw2">kbd</span>&gt;</span>D<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">kbd</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    Para guardar esta página en Favoritos, presione <kbd>Ctrl</kbd>+<kbd>D</kbd>
+</p>
+
+<p><strong><code>&lt;samp&gt;</code></strong></p>
+
+<p>Se utiliza la etiqueta <code>&lt;samp&gt;</code> para insertar texto que representa la salida en patantalla de información del sistema operativo o algún programa.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>El mensaje de error devuelto por la computadora fue <span class="sc2">&lt;<span class="kw2">samp</span>&gt;</span>Se ha detectado un error en la aplicación. Presione <span class="sc2">&lt;<span class="kw2">kbd</span>&gt;</span>F1<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">kbd</span>&gt;</span> para continuar o <span class="sc2">&lt;<span class="kw2">kbd</span>&gt;</span>Esc<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">kbd</span>&gt;</span> para salir.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">samp</span>&gt;</span></pre>
+</div>
+
+<p>&lt;</p>
+
+<p>p>El mensaje de error devuelto por la computadora fue: <samp>Se ha detectado un error en la aplicación. Presione <kbd>F1</kbd> para continuar o <kbd>Esc</kbd> para salir.</samp></p>
+
+<p><strong><code>&lt;s&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;s&gt;</code> se utiliza para marcar texto cuyo contenido no es preciso o que ya no es relevante.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>¡Compra un refrescante refresco de naranja!<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;&lt;<span class="kw2">s</span>&gt;</span>Precio inicial: $3.99 por botella<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">s</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;&lt;<span class="kw2">strong</span>&gt;</span>¡Ahora en rebaja a $2.99 por botella!<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">strong</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>¡Compra un refrescante refresco de naranja!</p>
+
+<p><s>Precio inicial: $3.99 por botella</s></p>
+
+<p><strong>¡Ahora en rebaja a $2.99 por botella!</strong></p>
+
+<p><strong><code>&lt;sup&gt;</code> y <code>&lt;sub&gt;</code></strong></p>
+
+<p>Para insertar superíndices y subíndices en el texto se utilizan las etiquetas <code>&lt;sup&gt;</code> y <code>&lt;sub&gt;</code>.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Resolver la siguiente ecuación: <span class="sc2">&lt;math&gt;</span>x<span class="sc2">&lt;<span class="kw2">sup</span>&gt;</span>2<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">sup</span>&gt;</span> + log<span class="sc2">&lt;<span class="kw2">sub</span>&gt;</span>10<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">sub</span>&gt;</span>15 = 25<span class="sc2">&lt;<span class="sy0">/</span>math&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    Resolver la siguiente ecuación: <math>x<sup>2</sup> + log<sub>10</sub>15 = 25</math>
+</p>
+
+<p><strong><code>&lt;time&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;time&gt;</code> se utiliza para representar información referente al tiempo. Esta puede ser la fecha, hora o la zona horaria. Se utiliza en conjunto con el atributo <code>datetime</code>, en el cual de indica, en un formato entendible para la máquina, el valor encerrado en la etiqueta <code>&lt;time&gt;</code>.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">time</span> <span class="kw3">datetime</span><span class="sy0">=</span><span class="st0">&quot;2014-01-6&quot;</span>&gt;</span> 6 de enero de 2014<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">time</span>&gt;</span></pre>
+</div>
+
+<p><time datetime="2014-01-6"> 6 de enero de 2014</time></p>
+
+<h2 id="enlaces">1.3 Enlaces</h2>
+
+<p>El lenguaje de marcado HTML se definió teniendo en cuenta algunas de las características que existían en ese momento para la publicación digital de contenidos. Entre los conceptos utilizados en su creación, se encuentra el mecanismo de "hipertexto".
+De hecho, las letras "HT" de la sigla HTML significan "hipertexto" (hypertext en inglés), por lo que el significado completo de HTML podría traducirse como "lenguaje de marcado para hipertexto". La incorporación del hipertexto fue una de las claves del éxito del lenguaje HTML, ya que permitió crear documentos interactivos que proporcionan información adicional cuando se solicita. El elemento principal del hipertexto es el "hiperenlace", también llamado "enlace web" o simplemente "enlace". Los enlaces se utilizan para establecer relaciones entre dos recursos. Aunque la mayoría de enlaces relacionan páginas web, también es posible enlazar otros recursos como imágenes, documentos y archivos.</p>
+
+<p><strong>Enlaces relativos y absolutos</strong></p>
+
+<p>Una página web puede contener enlaces a recursos que estén alojados en el mismo servidor donde se encuentra la página (enlaces internos) o a recursos que estén en servidores diferentes (enlaces externos).</p>
+
+<p>Los enlaces internos pueden ser referenciados omitiendo una parte de la URL y cuando esto se hace así se dice que el enlace es relativo:</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Este recurso está ubicado en la misma carpeta del arbol de directorios donde se encuentra la página que lo referencia: 
+    <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;mi_pagina.html&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/html&quot;</span> <span class="kw3">hreflang</span><span class="sy0">=</span><span class="st0">&quot;es_ES&quot;</span> chartset<span class="sy0">=</span><span class="st0">&quot;utf- 8&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;</span>Enlace relativo<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Este recurso está ubicado una carpeta más abajo de dónde se encuentra ubicada la página que lo referencia: 
+    <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;carpeta/mi_pagina.html&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;</span>Enlace relativo<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Este recurso se encuentra ubicado en el arbol de directorios, una carpeta más arriba que donde está la página que lo referencia: 
+    <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;../mi_pagina.html&quot;</span>&gt;</span>Enlace relativo<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    Este recurso está ubicado en la misma carpeta del arbol de directorios donde se encuentra la página que lo referencia: 
+    <a href="mi_pagina.html" target="_blank">Enlace relativo</a>
+</p>
+
+<p>
+    Este recurso está ubicado una carpeta más abajo de dónde se encuentra ubicada la página que lo referencia: 
+    <a href="carpeta/mi_pagina.html" target="_blank">Enlace relativo</a>
+</p>
+
+<p>
+    Este recurso se encuentra ubicado en el arbol de directorios, una carpeta más arriba que donde está la página que lo referencia: 
+    <a href="../mi_pagina.html">Enlace relativo</a>
+</p>
+
+<p>Cuando el enlace se escribe completamente, es decir, incluyendo todas las partes (protocolo, ruta, parámetros), se dice que el enlace es absoluto.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    Ejemplo de enlace absoluto: 
+    <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://symfony.es/noticias/2013/12/17/symfonyes-elegido-mejor-blog-mundial-sobre-symfony/&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;</span>Blog de Symfony en español<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    Ejemplo de enlace absoluto: 
+    <a href="http://symfony.es/noticias/2013/12/17/symfonyes-elegido-mejor-blog-mundial-sobre-symfony/" target="_blank">Blog de Symfony en español</a>
+</p>
+
+<p><strong>Tipos de enlaces</strong></p>
+
+<p>En el atributo <code>href</code>se pueden colocar ciertas palabras que indican el tipo de enlace que estamos utilizando:</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://localhost/mi_pagina.html&quot;</span>&gt;</span>Enlace normal<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;mailto: jdamian@tic.copextel.com.cu&quot;</span>&gt;</span>Enlace a un correo electrónico<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;xmpp: jdamian@chat.copextel.com.cu&quot;</span>&gt;</span>Enlace a un id de jabber<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;javascript: alert('Mi mensaje')&quot;</span>&gt;</span>Enlace con código javascript <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#mi_ancla&quot;</span>&gt;</span>Enlace a un anclaje<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+    <a href="http://localhost/mi_pagina.html">Enlace normal</a>
+</p>
+
+<p>
+    <a href="mailto:jdamian@tic.copextel.com.cu">Enlace a un correo electrónico</a>
+</p>
+
+<p>
+    <a href="xmpp:jesus_aud@chat.copextel.com.cu">Enlace a un id de jabber</a>
+</p>
+
+<p>
+    <a href="javascript:alert('Mi mensaje')">Enlace con código javascript </a>
+</p>
+
+<p>
+    <a class="link:internal" href="#mi_ancla">Enlace a un anclaje</a>
+</p>
+
+<h2 id="listas">1.4 Listas</h2>
+
+<p>Las listas permiten agrupar diferentes elementos que comparten una funcionalidad o significado común.</p>
+
+<p><strong>Listas no ordenadas</strong></p>
+
+<p><strong><code>&lt;ul&gt;</code></strong></p>
+
+<p>Se utiliza la etiqueta <code>&lt;ul&gt;</code> para crear listas no ordenas, que son aquellas que no tienen un orden o secuencia determinado. Este tipo de listas es muy utilizado en la conformación de los menúes de navegación:</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">h3</span>&gt;</span>Menú<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h3</span>&gt;</span>  
+<span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Inicio<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Noticias<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Artículos<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Tutoriales<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Contacto<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span></pre>
+</div>
+
+<h3>Menú</h3>
+
+<ul>
+    <li>Inicio</li>
+    <li>Noticias</li>
+    <li>Artículos</li>
+    <li>Tutoriales</li>
+    <li>Contacto</li>
+</ul>
+
+<p>La etiqueta <code>&lt;li&gt;</code> se utiliza para indicar los elementos de las listas.</p>
+
+<p><strong>Listas ordenadas</strong></p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">h3</span>&gt;</span>Instrucciones<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h3</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">ol</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Enchufar correctamente<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Verificar conexión<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Encender<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ol</span>&gt;</span></pre>
+</div>
+
+<h3>Instrucciones</h3>
+
+<ol>
+    <li>Enchufar correctamente</li>
+    <li>Verificar conexión</li>
+    <li>Encender</li>
+</ol>
+
+<p><strong>Listas de definición</strong></p>
+
+<p><strong><code>&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;dl&gt;</code> se utiliza para agrupar listas de definición.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">dl</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">dt</span>&gt;</span>Teclado<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">dt</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">dd</span>&gt;</span>Teclado es el nombre de un periférico utilizado para introducir datos en una computadora u ordenador.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">dd</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">dd</span>&gt;</span>La familia de los instrumentos de teclado, entre los que se encuentra el teclado electrónico.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">dd</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">dl</span>&gt;</span></pre>
+</div>
+
+<dl>
+    <dt>Teclado</dt>
+    <dd>Teclado es el nombre de un periférico utilizado para introducir datos en una computadora u ordenador.</dd>
+    <dd>La familia de los instrumentos de teclado, entre los que se encuentra el teclado electrónico.</dd>
+</dl>
+
+<p><strong>Anidación de listas</strong></p>
+
+<p>En html es posible colocar unas listas dentro de otras.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">h3</span>&gt;</span>Grupos alimenticio<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h3</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">ol</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Frutas y vegetales
+        <span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Zanahoria<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Mango<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Lechuga<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Carnes y pescados
+        <span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Carne de cerdo<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Atún<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Carnero<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Lacteos
+        <span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Yougurt<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Queso<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Leche<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ol</span>&gt;</span></pre>
+</div>
+
+<ol>
+    <li>Frutas y vegetales
+        <ul>
+            <li>Zanahoria</li>
+            <li>Mango</li>
+            <li>Lechuga</li>
+        </ul>
+    </li>
+    <li>Carnes y pescados
+        <ul>
+            <li>Carne de cerdo</li>
+            <li>Atún</li>
+            <li>Carnero</li>
+        </ul>
+    </li>
+    <li>Lacteos
+        <ul>
+            <li>Yougurt</li>
+            <li>Queso</li>
+            <li>Leche</li>
+        </ul>
+    </li>
+</ol>
+
+<h2 id="imagenes-y-objetos-embebidos">1.5 Imágenes y objetos embebidos</h2>
+
+<p>Las imágenes son uno de los elementos más importantes de las páginas web. De hecho, prácticamente todas las páginas web contienen alguna imagen y la mayoría incluyen decenas de imágenes. Dentro de las imágenes que se pueden incluir en una página HTML se deben distinguir dos tipos: las imágenes de contenido y las imágenes de adorno.</p>
+
+<p>Las imágenes de contenido son las que proporcionan información y complementan la información textual. Las imágenes de adorno son las que se utilizan para hacer bordes redondeados, para mostrar pequeños iconos en las listas de elementos, para mostrar fondos de página, etc. Las imágenes de contenido se incluyen directamente en el código HTML mediante la etiqueta <code>&lt;img&gt;</code> y las imágenes de adorno no se deberían incluir en el código HTML, sino que deberían emplearse hojas de estilos CSS para mostrarlas.</p>
+
+<p><strong><code>&lt;img&gt;</code></strong></p>
+
+<p>Mediante la etiqueta <code>&lt;img&gt;</code> es posible insertar imágenes en la página web.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;android.jpg&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;android&quot;</span>&gt;</span></pre>
+</div>
+
+<p><img src="images/android.jpg" alt="android"></p>
+
+<p><strong><code>&lt;figure&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;figure&gt;</code> fue creada para ayudarnos a ser aún más específicos a la hora de declarar el contenido del documento. Antes de que este elemento sea introducido, no podíamos identificar el contenido que era parte de la información pero a la vez independiente, como ilustraciones, fotos, videos, etc….Normalmente estos elementos son parte del contenido relevante pero pueden ser extraídos o movidos a otra parte sin afectar o interrumpir el flujo del documento. Cuando nos encontramos con esta clase de información, las etiquetas <code>&lt;figure&gt;</code> pueden ser usadas para identificarla:</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">figure</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/250px-Android_4.0.png&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Android 4.0&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">figcaption</span>&gt;</span>
+        Pantalla inicial de Android 4.0 (Ice Cream Sandwich) ejecutándose en un Galaxy Nexus.
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">figcaption</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">figure</span>&gt;</span></pre>
+</div>
+
+<p><figure>
+    <img src="images/250px-Android_4.0.png" alt="Android 4.0">
+    <figcaption>
+        Pantalla inicial de Android 4.0 (Ice Cream Sandwich) ejecutándose en un Galaxy Nexus.
+    </figcaption>
+</figure></p>
+
+<p>Las etiquetas <code>&lt;figcaption&gt;</code> encierran el texto relacionado con <code>&lt;figure&gt;</code> y
+establecen una relación entre ambos elementos y su contenido.</p>
+
+<p><strong>Mapas de imágenes</strong></p>
+
+<p><strong><code>&lt;map&gt;</code> y <code>&lt;area&gt;</code></strong></p>
+
+<p>Los mapas de imágenes permiten definir áreas "pinchables" dentro de una imagen. Cada una de estas zonas apunta a una URL diferente. Se puede tener, por ejemplo una imagen del mundo donde cada continente sea un enlace y cuando se pinche sobre él, se acceda a una página con los datos de esa parte del mundo.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/mundo.jpg&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;El mundo&quot;</span> <span class="kw3">usemap</span><span class="sy0">=</span><span class="st0">&quot;#Map&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">map</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;Map&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;Map&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;poly&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;7,24,80,75,120,37,65,13&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#América del Norte&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;América del Norte&quot;</span> <span class="sy0">/</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;93,70,136,137&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#América del sur&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;América del Sur&quot;</span> <span class="sy0">/</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;151,52,218,116&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#Africa&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;África&quot;</span> <span class="sy0">/</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;poly&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;155,35,236,61,270,83,321,28,297,17,273,10,210,16&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#Eurasia&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Eurasia&quot;</span> <span class="sy0">/</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;268,92,315,122&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#Australia&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Australia&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">map</span>&gt;</span></pre>
+</div>
+
+<p><img src="images/mundo.jpg" alt="El mundo" usemap="#Map">
+<map name="Map" id="Map">
+    <area shape="poly" coords="7,24,80,75,120,37,65,13" href="#América del Norte" title="América del Norte" />
+    <area shape="rect" coords="93,70,136,137" href="#América del sur" title="América del Sur" />
+    <area shape="rect" coords="151,52,218,116" href="#Africa" title="África" />
+    <area shape="poly" coords="155,35,236,61,270,83,321,28,297,17,273,10,210,16" href="#Eurasia" title="Eurasia" />
+    <area shape="rect" coords="268,92,315,122" href="#Australia" title="Australia" />
+</map></p>
+
+<p><strong><code>&lt;iframe&gt;</code></strong></p>
+
+<p>En una página web html es posible mostrar contenido de otra página html. Para esto se utiliza el elemento <code>&lt;iframe&gt;</code>, el cual indica una sección donde se puede cargar contenido externo e independiente de la página principal. Este elemento es muy utilizado para cargar el contenido de otras páginas que son llamadas desde enlaces que se encuentran en la página principal, sin necesidad de recargar esta primera.</p>
+
+<p><strong>Objetos embebidos</strong></p>
+
+<p><strong><code>&lt;object&gt;</code>, <code>&lt;param&gt;</code> y <code>&lt;embed&gt;</code></strong></p>
+
+<p>Además de las imágenes, HTML permite incluir en las páginas web otros elementos mucho más complejos, como applets de Java y vídeos en formato QuickTime o Flash. La mayoría de este tipo de contenidos no los interpreta el navegador directamente, sino que hace uso de pequeños programas llamados plugins y que se encargan de tratar con este tipo de elementos complejos. La etiqueta <code>&lt;object&gt;</code> es la que permite "embeber" o incluir en las páginas HTML cualquier tipo de contenido complejo.</p>
+
+<p><strong>Audio y video</strong></p>
+
+<p>En el nuevo estándar HTML 5 es posible incorporar dos tipos de objetos sin necesidad de ningún plugin adicional; estos son audio y video. La forma de incorporar estos tipos de medias es sumamente sencilla y se hace solo con el uso de las etiquetas <code>&lt;audio&gt;</code> y <code>&lt;video&gt;</code> respectivamente.</p>
+
+<h2 id="tablas">1.6 Tablas</h2>
+
+<p>Desde sus primeras versiones, HTML incluyó el soporte para crear tablas de datos en las páginas web. Además de ser sencillo, el modelo definido por HTML es muy flexible y bastante completo. Las tablas en HTML utilizan los mismos conceptos de filas, columnas, cabeceras y títulos que los que se utilizan en cualquier otro entorno de publicación de documentos:</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">table</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">caption</span>&gt;</span>Cursos sobre programación web<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">caption</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">thead</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">th</span>&gt;</span>Curso<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">th</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">th</span>&gt;</span>Horas<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">th</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">th</span>&gt;</span>Alumnos<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">th</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">th</span>&gt;</span>Horario<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">th</span>&gt;</span>
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">thead</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">tbody</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Introducción a HTML<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>20<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>30<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>8:30am - 12:30pm<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Introducción a Java Script<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>20<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>30<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>8:30am - 12:30pm<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>Comprendiendo AJAX<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>15<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>30<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>8:30am - 12:30pm<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tbody</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">tfoot</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+                <span class="sc2">&lt;<span class="kw2">td</span> <span class="kw3">colspan</span><span class="sy0">=</span><span class="st0">&quot;3&quot;</span>&gt;</span>Total<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+                <span class="sc2">&lt;<span class="kw2">td</span>&gt;</span>3 cursos<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+            <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tfoot</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">table</span>&gt;</span></pre>
+</div>
+
+<div class="table" id="table-1-1">
+
+    <table>
+    <caption>Cursos sobre programación web</caption>
+    <thead>
+        <tr>
+            <th>Curso</th>
+            <th>Horas</th>
+            <th>Alumnos</th>
+            <th>Horario</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Introducción a HTML</td>
+            <td>20</td>
+            <td>30</td>
+            <td>8:30am - 12:30pm</td>
+        </tr>
+        <tr>
+            <td>Introducción a Java Script</td>
+            <td>20</td>
+            <td>30</td>
+            <td>8:30am - 12:30pm</td>
+        </tr>
+        <tr>
+            <td>Comprendiendo AJAX</td>
+            <td>15</td>
+            <td>30</td>
+            <td>8:30am - 12:30pm</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total</td>
+                <td>3 cursos</td>
+            </tr>
+        </tfoot>
+</table>
+</div>
+
+
+<h2 id="formularios">1.7 Formularios</h2>
+
+<p>HTML es un lenguaje de marcado cuyo propósito principal consiste en estructurar los contenidos de los documentos y páginas web. Sin embargo, HTML también incluye elementos para crear aplicaciones web. El estándar HTML/XHTML permite crear formularios para que los usuarios interactúen con las aplicaciones web.</p>
+
+<p><strong><code>&lt;form&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;form&gt;</code> se utiliza para definir formularios en las páginas web. Es la etiqueta principal que agrupa todos los elementos que contendrá el formulario. Aunque en HTML 5 es posible inluir un control fuera de un formulario y después asociarlo a este mediante el atributo <code>form</code>:</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">form</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;mi-formulario&quot;</span> <span class="kw3">action</span><span class="sy0">=</span><span class="st0">&quot;procesa-form.php method=&quot;</span>POST<span class="st0">&quot;&gt;</span></span>
+    <span class="sc-1">&lt;!-- Aquí se definen los elementos del formulario. --&gt;</span>            
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">form</span>&gt;</span></pre>
+</div>
+
+<form name="mi-formulario" action="procesa-form.php" method="POST">
+    <!-- Aquí se definen los elementos del formulario. -->            
+</form>
+
+<p><strong><code>&lt;input&gt;</code></strong>
+El elemento <code>&lt;input&gt;</code> es el más utilizado en los formularios. El mismo define una entrada de información. El tipo de información a a que se refiere el elemento es definida mediante su atributo <code>type</code>. En el estándar HTML 5 es posible definir 23 tipos de valores diferentes para este atributo.</p>
+
+<p><strong><code>&lt;button&gt;</code></strong></p>
+
+<p>En HTML es posible utilizar otro tipo de botón genérico además del que se puede crear con el atributo <code>type=button</code> del elemento <code>input</code>.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">button</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;guardar&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;button&quot;</span>&gt;</span>Guardar<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">button</span>&gt;</span></pre>
+</div>
+
+<p><button name="guardar" type="button">Guardar</button></p>
+
+<p><strong>Otros elementos de formulario</strong></p>
+
+<p><strong><code>&lt;textarea&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;textarea&gt;</code> permite definir un control de formulario para insertar un texto grande.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">textarea</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">cols</span><span class="sy0">=</span><span class="st0">&quot;30&quot;</span> <span class="kw3">rows</span><span class="sy0">=</span><span class="st0">&quot;10&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">textarea</span>&gt;</span></pre>
+</div>
+
+<p><textarea name="" id="" cols="30" rows="10"></textarea></p>
+
+<p><strong><code>&lt;select&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;select&gt;</code> sirve para insertar en el formulario un control de listas despegables.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">select</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;so&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;so&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Windows&quot;</span>&gt;</span>Windows<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Linux&quot;</span>&gt;</span>Linux<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Unix&quot;</span> selected&gt;</span>Unix<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;MacOS&quot;</span>&gt;</span>MacOS<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;FreeBSD&quot;</span>&gt;</span>FreeBSD<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">select</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">select</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;so&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;so&quot;</span> <span class="kw3">size</span><span class="sy0">=</span><span class="nu0">5</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Windows&quot;</span>&gt;</span>Windows<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Linux&quot;</span>&gt;</span>Linux<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Unix&quot;</span> selected&gt;</span>Unix<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;MacOS&quot;</span>&gt;</span>MacOS<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;FreeBSD&quot;</span>&gt;</span>FreeBSD<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">select</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">select</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;so&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;so&quot;</span> multiple&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Windows&quot;</span>&gt;</span>Windows<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Linux&quot;</span>&gt;</span>Linux<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Unix&quot;</span> selected&gt;</span>Unix<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;MacOS&quot;</span>&gt;</span>MacOS<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;FreeBSD&quot;</span>&gt;</span>FreeBSD<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">select</span>&gt;</span></pre>
+</div>
+
+<p><select name="so" id="so">
+    <option value="Windows">Windows</option>
+    <option value="Linux">Linux</option>
+    <option value="Unix" selected>Unix</option>
+    <option value="MacOS">MacOS</option>
+    <option value="FreeBSD">FreeBSD</option>
+</select></p>
+
+<p><select name="so" id="so" size=5> 
+    <option value="Windows">Windows</option>
+    <option value="Linux">Linux</option>
+    <option value="Unix" selected>Unix</option>
+    <option value="MacOS">MacOS</option>
+    <option value="FreeBSD">FreeBSD</option>
+</select></p>
+
+<p><select name="so" id="so" multiple>
+    <option value="Windows">Windows</option>
+    <option value="Linux">Linux</option>
+    <option value="Unix" selected>Unix</option>
+    <option value="MacOS">MacOS</option>
+    <option value="FreeBSD">FreeBSD</option>
+</select></p>
+
+<p><strong><code>&lt;optgroup&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;optgroup&gt;</code> permite agrupar opciones relacionadas dentro de una lista desplegable.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">h3</span>&gt;</span>Sistemas operativos<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h3</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">select</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;so&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;so&quot;</span> <span class="kw3">multiple</span> <span class="kw3">size</span><span class="sy0">=</span><span class="nu0">5</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">optgroup</span> <span class="kw3">label</span><span class="sy0">=</span><span class="st0">&quot;Propietarios&quot;</span>&gt;</span> 
+        <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Windows&quot;</span>&gt;</span>Windows<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;MacOS&quot;</span>&gt;</span>MacOS<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Unix&quot;</span> selected&gt;</span>Unix<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">optgroup</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">optgroup</span> <span class="kw3">label</span><span class="sy0">=</span><span class="st0">&quot;Libres&quot;</span>&gt;</span> 
+        <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Ubuntu&quot;</span>&gt;</span>Ubuntu<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Debian&quot;</span>&gt;</span>Debian<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">option</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;FreeBSD&quot;</span> selected&gt;</span>FreeBSD<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">option</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">optgroup</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">select</span>&gt;</span></pre>
+</div>
+
+<h3>Sistemas operativos</h3>
+
+<p><select name="so" id="so" multiple size=5>
+    <optgroup label="Propietarios"> 
+        <option value="Windows">Windows</option>
+        <option value="MacOS">MacOS</option>
+        <option value="Unix" selected>Unix</option>
+    </optgroup>
+    <optgroup label="Libres"> 
+        <option value="Ubuntu">Ubuntu</option>
+        <option value="Debian">Debian</option>
+        <option value="FreeBSD" selected>FreeBSD</option>
+    </optgroup>
+</select></p>
+
+<p><strong><code>&lt;fieldset&gt; y &lt;legend&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;fieldset&gt;</code> se utiliza para agrupar elementos de formulario y para colocar una descripción a cada grupo se utiliza la etiqueta <code>&lt;legend&gt;</code>.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">form</span> <span class="kw3">action</span><span class="sy0">=</span><span class="st0">&quot;procesa.php&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">fieldset</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">legend</span>&gt;&lt;<span class="kw2">h5</span>&gt;</span>Datos personales<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h5</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">legend</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">label</span> <span class="kw3">for</span><span class="sy0">=</span><span class="st0">&quot;nombre&quot;</span>&gt;</span>Nombre: <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;nombre&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">label</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">label</span> <span class="kw3">for</span><span class="sy0">=</span><span class="st0">&quot;edad&quot;</span>&gt;</span>Edad: <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;number&quot;</span> <span class="kw3">min</span><span class="sy0">=</span><span class="nu0">18</span> <span class="kw3">max</span><span class="sy0">=</span><span class="nu0">100</span> <span class="kw3">size</span><span class="sy0">=</span><span class="nu0">3</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">label</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">label</span> <span class="kw3">for</span><span class="sy0">=</span><span class="st0">&quot;direccion&quot;</span>&gt;</span>Dirección: <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">size</span><span class="sy0">=</span><span class="st0">&quot;40&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;direccion&quot;</span> &gt;&lt;<span class="sy0">/</span><span class="kw2">label</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">fieldset</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">fieldset</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">legend</span>&gt;&lt;<span class="kw2">h5</span>&gt;</span>Datos laborales<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h5</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">legend</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">label</span> <span class="kw3">for</span><span class="sy0">=</span><span class="st0">&quot;centro&quot;</span>&gt;</span>Nombre del centro: <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;centro&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">label</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">label</span> <span class="kw3">for</span><span class="sy0">=</span><span class="st0">&quot;direccionw&quot;</span>&gt;</span>Dirección: <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">size</span><span class="sy0">=</span><span class="st0">&quot;40&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;direccionw&quot;</span> &gt;&lt;<span class="sy0">/</span><span class="kw2">label</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">label</span> <span class="kw3">for</span><span class="sy0">=</span><span class="st0">&quot;telefonow&quot;</span>&gt;</span>Teléfono <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;tel&quot;</span> <span class="kw3">size</span><span class="sy0">=</span><span class="nu0">9</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">label</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">fieldset</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">form</span>&gt;</span></pre>
+</div>
+
+<form action="procesa.php">
+    <fieldset>
+        <legend><h5>Datos personales</h5></legend>
+            <label for="nombre">Nombre: <input type="text" name="nombre"></label>
+            <label for="edad">Edad: <input type="number" min=18 max=100 size=3></label>
+            <label for="direccion">Dirección: <input size="40" type="text" name="direccion" ></label>
+    </fieldset>
+    <fieldset>
+        <legend><h5>Datos laborales</h5></legend>
+            <label for="centro">Nombre del centro: <input type="text" name="centro"></label>
+            <label for="direccionw">Dirección: <input size="40" type="text" name="direccionw" ></label>
+            <label for="telefonow">Teléfono <input type="tel" size=9></label>
+    </fieldset>
+</form>
+
+<p>En HTML 5 se incluyen dos nuevos elementos que aunque son muy parecidos visualmente sus significados difieren bastante.</p>
+
+<p><strong><code>&lt;progress&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;progress&gt;</code> se utiliza para mostrar una barra de progreso. Es necesario manipular este elemento mediante JavaScript para darle el comportamiento propio de una barra de progreso, modificando el valor de su atributo <code>value</code>.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Progress: <span class="sc2">&lt;<span class="kw2">progress</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;p&quot;</span> <span class="kw3">max</span><span class="sy0">=</span><span class="nu0">100</span>&gt;&lt;<span class="kw2">span</span>&gt;</span>0<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>%<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">progress</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+&nbsp;
+[javascript]  
+<span class="sc2">&lt;<span class="kw2">script</span>&gt;</span>
+var progressBar = document.getElementById('p');
+function updateProgress(newValue) {
+progressBar.value = newValue;
+progressBar.getElementsByTagName('span')[0].textContent = newValue;
+&nbsp;
+// alert(progressBar.getAttribute('max'));
+&nbsp;
+if(newValue <span class="sc2">&lt; progressBar.getAttribute<span class="br0">&#40;</span><span class="st0">'max'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#123;</span></span>
+&nbsp;
+<span class="sc2">newValue<span class="sy0">=</span>newValue+<span class="nu0">10</span>;</span>
+&nbsp;
+<span class="sc2">setTimeout<span class="br0">&#40;</span><span class="st0">'updateProgress('</span>+newValue+ <span class="st0">')'</span>, <span class="nu0">1000</span><span class="br0">&#41;</span>;</span>
+&nbsp;
+<span class="sc2"><span class="br0">&#125;</span></span>
+<span class="sc2"><span class="br0">&#125;</span>;</span>
+<span class="sc2">updateProgress<span class="br0">&#40;</span><span class="nu0">1</span><span class="br0">&#41;</span>;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span></pre>
+</div>
+
+<p>Progress: <progress id="p" max=100><span>0</span>%</progress></p>
+
+<script>
+var progressBar = document.getElementById('p');
+function updateProgress(newValue) {
+progressBar.value = newValue;
+progressBar.getElementsByTagName('span')[0].textContent = newValue;
+
+// alert(progressBar.getAttribute('max'));
+
+if(newValue < progressBar.getAttribute('max')){
+
+  newValue=newValue+10;
+
+setTimeout('updateProgress('+newValue+ ')', 1000);
+
+}
+};
+updateProgress(1);
+</script>
+
+<p><strong><code>&lt;meter&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;meter&gt;</code> se utiliza para mostrar una barra que aunque es parecida a una barra de progreso su utilización es diferente. Este tipo de barra se utiliza para mostrar valores fraccionarios, como por ejemplo, el espacio ocupado de un disco duro.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>
+Espacio ocupado del disco duro: <span class="sc2">&lt;<span class="kw2">meter</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;65&quot;</span> <span class="kw3">min</span><span class="sy0">=</span><span class="nu0">0</span> <span class="kw3">max</span><span class="sy0">=</span><span class="nu0">100</span>&gt;&lt;<span class="kw2">span</span>&gt;</span>65%<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">meter</span>&gt;</span> 65%.
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>
+Espacio ocupado del disco duro: <meter value="65" min=0 max=100><span>65%</span></meter> 65%.
+</p>
+
+<h2 id="dibujando-con-html-5">1.8 Dibujando con HTML 5</h2>
+
+<p>Esta API ofrece una de las más poderosas características de HTML5. Permite a 
+desarrolladores trabajar con un medio visual e interactivo para proveer capacidades de aplicaciones de escritorio para la web.</p>
+
+<p>Ya hemos hablado sobre como HTML5 está reemplazando previos complementos o plug-ins, como Flash o Java applets, por ejemplo. Había dos cosas importantes a considerar paraindependizar a la web de tecnologías desarrolladas por terceros: procesamiento de video y aplicaciones gráficas. El elemento <code>&lt;video&gt;</code> y la API para medios cubren el primer aspecto muy bien, pero no hacen nada acerca de los gráficos. La API Canvas se hace cargo del aspecto gráfico y lo hace de una forma extremadamente efectiva. Canvas nos permite dibujar,  presentar gráficos en pantalla, animar y procesar imágenes y texto, y trabaja junto con el resto de la especificación para crear aplicaciones completas e incluso video juegos en2 y 3 dimensiones para la web.</p>
+
+<p><strong><code>&lt;canvas&gt;</code></strong></p>
+
+<p>Este elemento genera un espacio rectangular vacío en la página web (lienzo) en el cual serán mostrados los resultados de ejecutar los métodos provistos por la API. Cuando es creado, produce sólo un espacio en blanco, como un elemento <code>&lt;div&gt;</code> vacío, pero con un propósito totalmente diferente.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">section</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;cajalienzo&quot;</span>&gt;</span> 
+    <span class="sc2">&lt;<span class="kw2">canvas</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;lienzo&quot;</span> <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;500&quot;</span> <span class="kw3">height</span><span class="sy0">=</span><span class="st0">&quot;300&quot;</span>&gt;</span> 
+    Su navegador no soporta el elemento canvas. 
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">canvas</span>&gt;</span> 
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">section</span>&gt;</span></pre>
+</div>
+
+<h2 id="otras-etiquetas-3">1.9 Otras etiquetas</h2>
+
+<p><strong><code>&lt;noscript&gt;</code></strong></p>
+
+<p>La etiqueta <code>&lt;noscript&gt;</code> se utiliza para encerrar el contenido que se le presentará al usuario al detectar que su nevagador tiene desactivado el uso de JavaScript. Se usa para informarle al usuario que es necesario tener habilitado JavaScript para que el sitio funcione correctamente.</p>
+
+<p><strong><code>&lt;hr&gt;</code></strong></p>
+
+<p>Se utiliza la etiqueta <code>&lt;hr&gt;</code> para insertar una regla horizontal en el documento. En HTML 5 esta etiqueta toma además un significado semántico, pues se utiliza para separar contenidos independientes.</p>
+
+
+</div>
+    <div class="item item:chapter">
+
+<h1 id="css"><span>Capítulo 2</span> CSS</h1>
+
+<h2 id="selectores">2.1 Selectores</h2>
+
+<p>Para crear diseños web profesionales, es imprescindible conocer y dominar los
+selectores de CSS. Como se vio en el capítulo anterior, una regla de CSS está
+formada por una parte llamada "selector" y otra parte llamada "declaración". La
+declaración indica "qué hay que hacer" y el selector indica "a quién hay que
+hacérselo". Por lo tanto, los selectores son imprescindibles para aplicar de
+forma correcta los estilos CSS en una página</p>
+
+<p><strong>Selector universal</strong></p>
+
+<p>El símbolo <code>*</code> se utiliza para seleccionar todos los elementos de la página.</p>
+
+<div class="code css">
+<pre class="css"><span class="sy0">*</span><span class="br0">&#123;</span>
+    <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p><strong>Selector de tipo o etiqueta</strong></p>
+
+<p>Selecciona todos los elementos de la página cuya etiqueta HTML coincide con el
+valor del selector. El siguiente ejemplo selecciona todos los párrafos de la
+página.</p>
+
+<div class="code css">
+<pre class="css">p<span class="br0">&#123;</span>
+    <span class="kw1">margin-right</span><span class="sy0">:</span> <span class="re3">30px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Si se quieren aplicar los mismos estilos a etiquetas diferentes se pueden
+concatenar los selectores separados por una coma.</p>
+
+<div class="code css">
+<pre class="css">p<span class="sy0">,</span> h1<span class="sy0">,</span> h2<span class="br0">&#123;</span>
+    <span class="kw1">color</span><span class="sy0">:</span> <span class="kw1">black</span><span class="sy0">;</span>
+    <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">18px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p><strong>Selector descendente</strong></p>
+
+<p>Selecciona los elementos que se encuentran dentro de otros elementos.</p>
+
+<div class="code css">
+<pre class="css">p span<span class="br0">&#123;</span>
+        <span class="kw1">padding</span><span class="sy0">:</span> <span class="re3">30px</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+    p a span em <span class="br0">&#123;</span>
+        <span class="kw1">text-decoration</span><span class="sy0">:</span> <span class="kw2">underline</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span></pre>
+</div>
+
+<p>Si se emplea el selector descendente combinado con el selector universal, se
+puede restringir el alcance de un selector descendente. El siguiente ejemplo,
+muestra los dos enlaces de color rojo.</p>
+
+<div class="code css">
+<pre class="css">p a <span class="br0">&#123;</span>
+    <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<pre><code>[html]
+&lt;p&gt;&lt;a href="#"&gt;Enlace&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&lt;a href="#"&gt;Enlace&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+
+<p>Sin embargo, en el siguiente ejemplo solamente el segundo enlace se muestra de
+color rojo:</p>
+
+<div class="code css">
+<pre class="css">p <span class="sy0">*</span> a <span class="br0">&#123;</span>
+    <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span></pre>
+</div>
+
+<pre><code>}
+
+[html]     
+&lt;p&gt;&lt;a href="#"&gt;Enlace&lt;/a&gt;&lt;/p&gt;     
+&lt;p&gt;&lt;span&gt;&lt;a href="#"&gt;Enlace&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+
+<p>La razón es que el selector p * a se traduce como todos los elementos de tipo
+<code>&lt;a&gt;</code> que se encuentren dentro de cualquier elemento que, a su vez, se encuentre
+dentro de un elemento de tipo <code>&lt;p&gt;</code>. Como el primer elemento <code>&lt;a&gt;</code> se encuentra
+directamente bajo un elemento <code>&lt;p&gt;</code>, no se cumple la condición del selector p *
+a.</p>
+
+<p><strong>Selector de clase</strong></p>
+
+<p>El selector de clase constituye una regla CSS para la cual se define un
+<em>nombre</em>, el cual luego puede ser utilizado asignándolo a un elemento mediante
+su atributo <code>class</code>. Se escriben siempre con el caracter <code>.</code> delante.</p>
+
+<div class="code css">
+<pre class="css">.destacar<span class="br0">&#123;</span>
+    <span class="kw1">background-color</span><span class="sy0">:</span> <span class="kw2">yellow</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="br0">&#91;</span>html<span class="br0">&#93;</span>
+&lt;p class<span class="sy0">=</span>destacar<span class="sy0">&gt;</span>
+    Lorem ipsum dolor sit amet<span class="sy0">,</span> consectetur adipisicing elit. Eius<span class="sy0">,</span> culpa!
+&lt;/p<span class="sy0">&gt;</span></pre>
+</div>
+
+<p>¿Cómo es posible aplicar estilos solamente al párrafo cuyo atributo class sea
+igual a destacado? Combinando el selector de tipo y el selector de clase, se
+obtiene un selector mucho más específico:</p>
+
+<div class="code css">
+<pre class="css">p.destacado<span class="br0">&#123;</span>
+    <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="br0">&#91;</span>html<span class="br0">&#93;</span>
+&lt;p class<span class="sy0">=</span>destacar<span class="sy0">&gt;</span>
+    Lorem ipsum dolor sit amet...
+&lt;/p<span class="sy0">&gt;</span>     
+&lt;p<span class="sy0">&gt;</span>
+    Nunc sed lacus et &lt;a href<span class="sy0">=</span><span class="st0">&quot;#&quot;</span> class<span class="sy0">=</span>destacar<span class="sy0">&gt;</span>est adipiscing&lt;/a<span class="sy0">&gt;</span> accumsan...</pre>
+</div>
+
+<pre><code>&lt;/p&gt;
+&lt;p&gt;
+    Class aptent taciti &lt;em class=destacar&gt;sociosqu ad&lt;/em&gt; litora...
+&lt;/p&gt;
+</code></pre>
+
+<p>No debe confundirse el selector de clase con los selectores anteriores:</p>
+
+<div class="code code">
+<pre class="code">[css]</pre>
+</div>
+
+<pre><code>/* Todos los elementos de tipo "p" con atributo class="aviso" */
+p.aviso{ ... }
+
+/* Todos los elementos con atributo class="aviso" que estén dentro de cualquier elemento de tipo "p" */     
+p .aviso { ... }
+
+/* Todos los elementos "p" de la página y todos los elementos con atributo class="aviso" de la página */     
+p, .aviso { ... }
+</code></pre>
+
+<p>Por último, es posible aplicar los estilos de varias clases CSS sobre un mismo
+elemento. La sintaxis es similar, pero los diferentes valores del atributo class
+se separan con espacios en blanco. En el siguiente ejemplo:</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;especial destacado error&quot;</span>&gt;</span>Párrafo de texto<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+</div>
+
+<p>Si un elemento dispone de un atributo class con más de un valor, es posible utilizar un selector más avanzado:</p>
+
+<pre><code>[css]
+.error{
+    color: red;
+}
+.error.destacado{
+ color: blue;
+ }
+ .destacado{
+     font-size: 15px;
+ }
+ .especial{
+     font-weight: bold;
+ }&lt;div class="code code"&gt;
+</code></pre>
+
+<pre class="code">&lt;p class=&quot;especial destacado error&quot;&gt;Párrafo de texto&lt;/p&gt;</pre>
+
+<p></div>
+En el ejemplo anterior, el color de la letra del texto es azul y no rojo. El motivo es que se ha utilizado un selector de clase múltiple .error.destacado, que se interpreta como aquellos elementos de la página que dispongan de un atributo class con al menos los valores error y destacado.</p>
+
+<p><strong>Selectores de id</strong></p>
+
+<p>El selector de tipo id permite seleccionar el elemento de acuerdo al valor de su
+atributo <em>id</em>. Siempre se escribe con el caracter <code>#</code>delante.</p>
+
+<div class="code css">
+<pre class="css"><span class="re0">#mi-parrafo</span><span class="br0">&#123;</span>
+    <span class="kw1">border-color</span><span class="sy0">:</span> <span class="kw1">black</span><span class="sy0">;</span>
+    <span class="kw1">border-style</span><span class="sy0">:</span> <span class="kw2">dotted</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="br0">&#91;</span>html<span class="br0">&#93;</span>
+&lt;p id<span class="sy0">=</span><span class="st0">&quot;mi-parrafo&quot;</span><span class="sy0">&gt;</span>Lorem ipsum dolor sit amet<span class="sy0">,</span> consectetur adipisicing elit. Laboriosam<span class="sy0">,</span> fugiat.&lt;/p<span class="sy0">&gt;</span></pre>
+</div>
+
+<h3 id="selectores-avanzados">2.1.1 Selectores avanzados</h3>
+
+<p><strong>Selector de hijos</strong></p>
+
+<p>Se trata de un selector similar al selector descendente, pero muy diferente en
+su funcionamiento. Se utiliza para seleccionar un elemento que es hijo directo
+de otro elemento y se indica mediante el <em>"signo de mayor que"</em> (>):</p>
+
+<div class="code css">
+<pre class="css">p <span class="sy0">&gt;</span> span<span class="br0">&#123;</span>
+    <span class="kw1">color</span><span class="sy0">:</span> <span class="kw1">blue</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="br0">&#91;</span>html<span class="br0">&#93;</span>
+&lt;p<span class="sy0">&gt;</span>&lt;span<span class="sy0">&gt;</span>Texto1&lt;/span<span class="sy0">&gt;</span>&lt;/p<span class="sy0">&gt;</span>
+&lt;p<span class="sy0">&gt;</span>&lt;a href<span class="sy0">=</span><span class="st0">&quot;#&quot;</span><span class="sy0">&gt;</span>&lt;span<span class="sy0">&gt;</span>Texto2&lt;/span<span class="sy0">&gt;</span>&lt;/a<span class="sy0">&gt;</span>&lt;/p<span class="sy0">&gt;</span></pre>
+</div>
+
+<p>En el ejemplo anterior, el selector p > span se interpreta como <em>"cualquier
+elemento <code>&lt;span&gt;</code> que sea hijo directo de un elemento <code>&lt;p&gt;</code>"</em> , por lo que el
+primer elemento <code>&lt;span&gt;</code> cumple la condición del selector. Sin embargo, el
+segundo elemento <code>&lt;span&gt;</code> no la cumple porque es descendiente pero no es hijo
+directo de un elemento <code>&lt;p&gt;</code>.</p>
+
+<p><strong>Selector adyacente</strong></p>
+
+<p>Para utilizar el selector adyacente se utiliza el signo <code>+</code>.</p>
+
+<pre><code>elemento1 + elemento2{
+    ...
+}
+</code></pre>
+
+<p>La explicación del comportamiento de este selector no es sencilla, ya que selecciona todos los elementos de tipo elemento2 que cumplan las dos siguientes condiciones:</p>
+
+<ul>
+<li>elemento1 y elemento2 deben ser hermanos, por lo que su elemento padre debe
+ser el mismo. </li>
+<li>elemento2 debe aparecer inmediatamente después de elemento1 en
+el código HTML de la página.</li>
+</ul>
+
+<p>Veamos el siguiente ejemplo:</p>
+
+<div class="code css">
+<pre class="css">h1 <span class="sy0">+</span> h2<span class="br0">&#123;</span>
+    <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="br0">&#91;</span>html<span class="br0">&#93;</span>
+&lt;h1<span class="sy0">&gt;</span>Titulo1&lt;/h1<span class="sy0">&gt;</span></pre>
+</div>
+
+<pre><code>&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h2&gt;Otro subtítulo&lt;/h2&gt;
+</code></pre>
+
+<p><strong>Selector de atributo</strong></p>
+
+<p>Es posible seleccionar uno o varios elementos mediante el nombre de sus atributos y/o sus valores.</p>
+
+<div class="code css">
+<pre class="css">p<span class="br0">&#91;</span>mi-atributo<span class="br0">&#93;</span><span class="br0">&#123;</span>
+    <span class="kw1">font-family</span><span class="sy0">:</span> Verdana<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="br0">&#91;</span>html<span class="br0">&#93;</span>
+&lt;p<span class="sy0">&gt;</span>
+    Lorem ipsum dolor sit amet<span class="sy0">,</span> consectetur adipisicing elit. Voluptate<span class="sy0">,</span> enim<span class="sy0">,</span> dolores<span class="sy0">,</span> necessitatibus impedit nostrum animi odit illo deleniti rem obcaecati excepturi eveniet velit ratione at nemo atque unde maiores inventore.
+&lt;/p<span class="sy0">&gt;</span> 
+&lt;p mi-atributo<span class="sy0">&gt;</span>
+    Lorem ipsum dolor sit amet<span class="sy0">,</span> consectetur adipisicing elit. Obcaecati<span class="sy0">,</span> ex<span class="sy0">,</span> aspernatur<span class="sy0">,</span> molestiae<span class="sy0">,</span> magni suscipit veniam animi expedita sit tempora quae maiores officiis voluptas! Consequatur<span class="sy0">,</span> eum<span class="sy0">,</span> libero debitis tenetur velit veritatis.
+&lt;/p<span class="sy0">&gt;</span></pre>
+</div>
+
+<h3 id="pseudo-clases">2.1.2 Pseudo-clases</h3>
+
+<p><strong>Pseudo-clases de enlaces</strong></p>
+
+<p>CSS define cuatro pseudo-clases que permiten aplicar estilos avanzados para los enlaces de los documentos. Las pseudo-clases permiten aplicar diferentes estilos a un mismo enlace en función de su estado: enlace no visitado, enlace visitado, enlace en el que se pasa el puntero del ratón por
+encima y enlace activo en ese momento.</p>
+
+<div class="code css">
+<pre class="css">a<span class="re2">:link</span><span class="br0">&#123;</span>
+    <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span>
+    <span class="kw1">text-decoration</span><span class="sy0">:</span> <span class="kw2">none</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+a<span class="re2">:visited</span><span class="br0">&#123;</span>
+    <span class="kw1">color</span><span class="sy0">:</span> <span class="kw1">blue</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+a<span class="re2">:hover</span><span class="br0">&#123;</span>
+    <span class="kw1">text-decoration</span><span class="sy0">:</span> <span class="kw2">underline</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+ a<span class="re2">:active</span><span class="br0">&#123;</span>
+    <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">gray</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+input<span class="re2">:focus</span><span class="br0">&#123;</span>
+    <span class="kw1">background-color</span><span class="sy0">:</span> <span class="kw2">gray</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+p<span class="re2">:nth-</span>child<span class="br0">&#40;</span><span class="nu0">2</span><span class="br0">&#41;</span><span class="br0">&#123;</span> 
+    <span class="kw1">background</span><span class="sy0">:</span> <span class="re0">#999999</span><span class="sy0">;</span> 
+<span class="br0">&#125;</span>
+&nbsp;
+tbody tr<span class="re2">:nth-</span>child<span class="br0">&#40;</span>even<span class="br0">&#41;</span><span class="br0">&#123;</span>
+    <span class="kw1">background-color</span><span class="sy0">:</span> <span class="kw2">gray</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+tbody tr<span class="re2">:nth-</span>child<span class="br0">&#40;</span>odd<span class="br0">&#41;</span><span class="br0">&#123;</span>
+    <span class="kw1">background-color</span><span class="sy0">:</span> <span class="kw2">gray</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+ul li<span class="re2">:last-child</span><span class="br0">&#123;</span>
+    <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+ul li<span class="re2">:first-child</span><span class="br0">&#123;</span>
+    <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+ul li<span class="re2">:only-child</span><span class="br0">&#123;</span>
+    <span class="kw1">color</span><span class="sy0">:</span> <span class="kw2">red</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="sy0">:</span>not<span class="br0">&#40;</span>p<span class="br0">&#41;</span><span class="br0">&#123;</span>
+    <span class="kw1">margin</span><span class="sy0">:</span><span class="re3">20px</span><span class="sy0">;</span></pre>
+</div>
+
+<pre><code>}
+</code></pre>
+
+
+</div>
+
+</div></body>
+</html>
